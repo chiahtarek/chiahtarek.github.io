@@ -1,14 +1,81 @@
-
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Georgia", serif;
 
 }
-body{
-   background-color: black;
+
+body {
+    background: linear-gradient(to bottom, #6a4c93, #3f51b5, #ff5722);
 }
-h1,h3,h4,p{
+
+h1,
+h3,
+h4,
+p {
     color: white;
+}
+
+.contimg {
+
+    display: flex;
+    justify-content: right;
+    margin: 50px;
+
+}
+
+.img img {
+    width: 400px;
+    height: 700px;
+    object-fit: contain;
+    border-radius: 30%;
+}
+
+.apr {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+.contato {
+
+    display: flex;
+
+    align-self: end;
+
+
+}
+
+.curriculo {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.curriculo h4 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.botao-curriculo {
+    padding: 10px 20px;
+    background-color: #4253eb;
+    /* Cor laranja */
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.botao-curriculo:hover {
+    background-color: #e64a19;
+    /* Cor laranja mais escura no hover */
+}
+
+.cont2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
