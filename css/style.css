@@ -33,9 +33,12 @@ p {
 }
 
 .apr {
+    
     display: flex;
     flex-direction: column;
+    justify-content: left; 
     align-self: center;
+       
 }
 
 .contato {
@@ -78,4 +81,19 @@ p {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+}
+@media (max-width: 870px) {
+    .contimg{
+        flex-direction: column-reverse;
+        padding: 50px 5%;
+        text-align: center;
+        justify-content: center;
+    }
+    
+    .img{
+          margin-bottom: 30px;
+    }
+    .img{
+        height: 580px;
+    }
 }
