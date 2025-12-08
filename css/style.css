@@ -2,149 +2,180 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:Verdana, Geneva, Tahoma, sans-serif
-
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-    background: linear-gradient(to bottom, #6a4c93, #3f51b5, #ff5722);
+    background-color: rgba(0, 0, 0, 0.871);
+    color: rgba(255, 255, 255, 0.711);
 }
 
-h1,
-h3,
-h4,
-p {
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 10%;
+    flex-wrap: wrap;
+}
+
+.home-content {
+    max-width: 600px;
+}
+
+.home-content h1 {
+    font-size: 3rem;
     color: white;
+    margin-bottom: 16px;
 }
 
-.contimg {
-
-    display: flex;
-    justify-content: right;
-    margin: 50px;
-
-}
-
-.img img {
-    width: 400px;
-    height: 700px;
-    object-fit: contain;
-    border-radius: 30%;
-}
-
-.apr {
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: left; 
-    align-self: center;
-       
-}
-
-.contato {
-
-    display: flex;
-
-    align-self: end;
-
-
-}
-
-.curriculo {
-    text-align: center;
-    margin-top: 30px;
+.home-content h3 {
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.756);
     margin-bottom: 20px;
 }
 
-.curriculo h4 {
-    color: white;
-    margin-bottom: 10px;
+.home-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
 }
 
-.botao-curriculo {
-    padding: 10px 20px;
-    background-color: #4253eb;
-    /* Cor laranja */
+.social-media {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.social-media a {
+    font-size: 2rem;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+    color: rgba(18, 115, 241, 0.852);
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: rgba(18, 115, 241, 0.852);
     color: white;
     text-decoration: none;
+    border-radius: 20px;
     font-weight: bold;
-    border-radius: 5px;
     transition: background-color 0.3s ease;
 }
 
-.botao-curriculo:hover {
-    background-color: #e64a19;
-    /* Cor laranja mais escura no hover */
+.btn:hover {
+    background-color: rgba(5, 43, 93, 0.852);
 }
 
-.cont2 {
+.home-img {
+    max-width: 400px;
+    flex: 1;
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-.cont-skill{
-    width: 900px;
-}
-.skills{
-    display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    height: 380px;
-    width: auto;
 }
-.skill1{
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 30px;
-    
-    
+
+.home-img img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px black;
 }
-.skill2{
-    margin-bottom: 30px;
-    display: flex;
-    justify-content: space-between;
-}
-.skill3{
-    margin-bottom: 30px;
-    display: flex;
-    justify-content: space-between;
-}
-@media (max-width: 870px) {
-    .contimg{
+
+@media (max-width: 900px) {
+    .home {
         flex-direction: column-reverse;
         padding: 50px 5%;
         text-align: center;
+    }
+
+    .home-content {
+        max-width: 100%;
+    }
+
+    .social-media {
         justify-content: center;
     }
-    
-    .img{
-          margin-bottom: 30px;
+
+    .home-img {
+        margin-bottom: 30px;
     }
-    .img{
-        height: 580px;
-    }
-    .skills{
-        margin-top: 200px;
-    }
-    .cont-skill{
-        margin-top: 50px;
-        width: 500px;
-        gap: 9px;
-    }
-    .skill1{
-        display: flex;
-        flex-direction: column;
-        gap: 9px;
-    }
-    .skill2{
-        display: flex;
-        flex-direction: column;
-        gap: 9px;
-    }
-    .skill3{
-        display: flex;
-        flex-direction: column;
-        gap: 9px;
-    }
+}
+
+.section-padding {
+    padding: 80px 10% 50px 10%; 
+}
+
+.projects .card .btn {
+    padding: 8px 15px;
+}
+
+.projects .card {
+    border: 1px solid rgba(18, 115, 241, 0.4);
+}
+
+.theme-toggle {
+    border-radius: 50% !important;
+    width: 45px;
+    height: 45px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgba(255, 255, 255, 0.3) !important;
+    transition: all 0.3s ease;
+}
+
+body.light-mode {
+    background-color: #f5f5f5 !important;
+    color: #333 !important;
+}
+.typing {
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.756);
+    border-right: 2px solid rgba(255,255,255,0.8);
+    white-space: nowrap;
+    overflow: hidden;
+    padding-right: 5px;
+    animation: blinkCursor 0.7s infinite;
+}
+
+@keyframes blinkCursor {
+    0% { border-right-color: rgba(255,255,255,0.8); }
+    50% { border-right-color: transparent; }
+    100% { border-right-color: rgba(255,255,255,0.8); }
+}
+body {
+    color: #eee; /* cinza claro para fundo escuro */
+}
+
+/* Texto no modo claro: deixar preto */
+body.light-mode {
+    color: #000 !important;
+}
+
+/* Para os textos específicos, garanta que fiquem pretos no modo claro */
+
+body.light-mode h1,
+body.light-mode h2,
+body.light-mode h3,
+body.light-mode h4,
+body.light-mode p,
+body.light-mode a,
+body.light-mode .social-media a,
+body.light-mode .btn {
+    color: #000 !important;
+}
+
+/* Para o texto do typing effect */
+body.light-mode .typing {
+    color: #000 !important;
+    border-right-color: #000 !important;
+}
+
+/* Para links ou textos com cor específica que estavam claros */
+body.light-mode .text-primary {
+    color: #0056b3 !important; /* azul escuro, legível */
 }
